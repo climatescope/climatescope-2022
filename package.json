@@ -4,7 +4,7 @@
   "description": "Climatescope website",
   "repository": {
     "type": "git",
-    "url": "https://github.com/climatescope/climatescope.org.git"
+    "url": "https://github.com/climatescope/climatescope-2022.org.git"
   },
   "author": {
     "name": "Development Seed",
@@ -12,9 +12,9 @@
   },
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/climatescope/climatescope.org/issues"
+    "url": "https://github.com/climatescope/climatescope-2022.org/issues"
   },
-  "homepage": "http://global-climatescope.org/",
+  "homepage": "http://2022.global-climatescope.org/",
   "scripts": {
     "develop": "npm run buildNavigation && npm run prepareImages && next",
     "build": "npm run buildNavigation && next build",
