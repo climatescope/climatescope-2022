@@ -1,8 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from "next/document"
-import getConfig from "next/config"
-
-const { publicRuntimeConfig } = getConfig()
-const googleAnalyticsId = publicRuntimeConfig.googleAnalyticsId
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -29,22 +25,6 @@ export default class MyDocument extends Document {
             href="https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.css"
             rel="stylesheet"
           ></link>
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${googleAnalyticsId}', {
-              page_path: window.location.pathname,
-            });
-          `,
-            }}
-          />
         </Head>
         <body>
           <Main />
