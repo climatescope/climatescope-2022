@@ -30,14 +30,11 @@ jobs:
         with:
           node-version: ${{ env.NODE }}
 
-      - name: Set up Yarn
-        run: corepack prepare yarn@1.22.22 --activate
-
       - name: Install
-        run: yarn install
+        run: npm ci
 
       - name: Build
-        run: yarn export
+        run: npm run export
         env:
           SITE_URL: https://2022.global-climatescope.org/
           MAILCHIMP_ADDRESS: ${{ secrets.MAILCHIMP_ADDRESS }}
